@@ -6,8 +6,8 @@ import videos from "../data/database.json";
 function VideoList() {
   return (
     <div>
-      {videos.map((video) => (
-        <Video key={video.title} {...video} />
+      {videos.map((video, index) => (
+        <Video key={index} {...video} />
       ))}
     </div>
   );
