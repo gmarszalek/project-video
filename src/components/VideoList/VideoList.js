@@ -7,7 +7,7 @@ function VideoList() {
   return (
     <div>
       {videos.map((video) => (
-        <Video title={video.title} source={video.video_url} desc={video.description} />
+        <Video key={video.title} {...video} />
       ))}
     </div>
   );
