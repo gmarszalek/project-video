@@ -1,12 +1,17 @@
 import React from "react";
 
-import Video from "./Video";
-
 function VideoList(props) {
   return (
     <div className="video-list">
       {props.videos.map((video, index) => (
-        <Video key={`video-${index}`} video={video} handleClick={props.handleClick} />
+        <div key={`viedo-${index}`}>
+          <img src={video.video_thumbnail} alt="viedo-thumbnail"></img>
+          <h3>
+            <a href="#" onClick={(event) => props.handleClick(event, video)}>
+              {video.title}
+            </a>
+          </h3>
+        </div>
       ))}
     </div>
   );

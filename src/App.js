@@ -1,7 +1,10 @@
 import React from "react";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import VideoList from "./components/VideoList";
-import DisplayVideo from "./components/DisplayVideo";
+import Video from "./components/Video/Video";
+import About from "./components/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -22,19 +25,42 @@ class App extends React.Component {
         })
       );
   }
-  handleClick = (el) => {
-    this.setState({ activeVideo: el });
+  handleClick = (e, elem) => {
+    e.preventDefault();
+    this.setState({ activeVideo: elem });
+    console.log("elem: ", elem);
   };
 
   render() {
-    const { videos } = this.state;
+    const { videos, activeVideo } = this.state;
     return (
       <div className="App">
         <Header />
-        <div className="App__video">
-          <VideoList videos={videos} handleClick={this.handleClick} />
-        </div>
-        <div className="App__player">{videos.length ? <DisplayVideo video={this.state.activeVideo} /> : null}</div>
+        <Router>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+              </ul>
+            </nav>
+
+            <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/">
+                <VideoList videos={videos} handleClick={this.handleClick} />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+
+        {videos.length ? <Video video={activeVideo} /> : null}
         <Footer />
       </div>
     );

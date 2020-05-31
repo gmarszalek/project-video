@@ -12,6 +12,7 @@
     "react-html5video": "^2.5.1",
     "react-player": "^2.0.1",
     "react-plyr": "^2.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
