@@ -2,11 +2,13 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import VideoList from "./components/VideoList";
+import VideoList from "./components/VideoList/VideoList";
 import Video from "./components/Video/Video";
-import About from "./components/About";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import DisplayVideoList from "./components/DisplayVideoList/DisplayVideoList";
+import DisplaySingleVideo from "./components/DisplaySingleVideo/DisplaySingleVideo";
+import About from "./components/About/About";
+import Footer from "./components/Footer/Footer";
+import Nav from "./components/Nav/Nav";
 import "./App.css";
 
 class App extends React.Component {
@@ -28,41 +30,25 @@ class App extends React.Component {
   handleClick = (e, elem) => {
     e.preventDefault();
     this.setState({ activeVideo: elem });
-    console.log("elem: ", elem);
   };
 
   render() {
     const { videos, activeVideo } = this.state;
     return (
-      <div className="App">
-        <Header />
-        <Router>
-          <div>
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-              </ul>
-            </nav>
-
-            <Switch>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/">
-                <VideoList videos={videos} handleClick={this.handleClick} />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-
-        {videos.length ? <Video video={activeVideo} /> : null}
-        <Footer />
-      </div>
+      <Router>
+        <div className="App">
+          <Nav />
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/video" exact component={DisplayVideoList} />
+            <Route path="/video/:id" component={DisplaySingleVideo} />
+            <Route path="/" exact>
+              <VideoList videos={videos} handleClick={this.handleClick} />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
