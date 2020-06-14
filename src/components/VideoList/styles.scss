@@ -1,0 +1,29 @@
+.video-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    width: 100%;
+  }
+
+  &--item {
+    width: 300px;
+    height: 300px;
+    margin: 8px;
+  }
+
+  &--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  &--title a {
+    color: #333;
+    text-decoration: none;
+  }
+}

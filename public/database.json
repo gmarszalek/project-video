@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "title": "Mój ulubiony filmik 1",
-    "description": "Opis mojego ulubionego filmiku",
+    "title": "Nature relaxation movie",
+    "description": "4K VIDEO ULTRAHD AFRICAN WILDLIFE  WITH  RELAXATION MUSIC FOR 4K OLED TV - 2 HR",
     "video_url": "https://youtu.be/Bey4XXJAqS8",
     "video_thumbnail": "http://i3.ytimg.com/vi/Bey4XXJAqS8/hqdefault.jpg"
   },
   {
     "id": 2,
-    "title": "Mój ulubiony filmik 2",
-    "description": "Beginner Vanilla Javascript Project Tutorial",
+    "title": "Vanilla Javascript Project",
+    "description": "In this episode we are going to cover a small project of the full Creative Javascript Course, a todo list in vanilla js.",
     "video_url": "https://www.youtube.com/watch?v=Ttf3CEsEwMQ",
     "video_thumbnail": "http://i3.ytimg.com/vi/Ttf3CEsEwMQ/hqdefault.jpg"
   },
   {
     "id": 3,
-    "title": "Mój ulubiony filmik 3",
-    "description": "Top 5 Web Development Trends 2020",
+    "title": "Top 5 Web Development Trends 2020",
+    "description": "Today we are going to discuss some web development trends that are hopefully going to happen in 2020.",
     "video_url": "https://www.youtube.com/watch?v=aHiyubvPF8w",
     "video_thumbnail": "http://i3.ytimg.com/vi/aHiyubvPF8w/hqdefault.jpg"
   },
   {
     "id": 4,
-    "title": "Mój ulubiony filmik 4",
-    "description": "Build and Deploy a React PWA",
+    "title": "Why Progressive Web Apps are the Future of the Web",
+    "description": "In this video, you're going to learn how to build a PWA using React.",
     "video_url": "https://www.youtube.com/watch?v=IaJqMcOMuDM",
     "video_thumbnail": "http://i3.ytimg.com/vi/IaJqMcOMuDM/hqdefault.jpg"
   }
