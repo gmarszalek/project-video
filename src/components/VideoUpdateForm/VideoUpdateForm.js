@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from "react";
 
-function VideoCreateForm(match) {
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& .MuiTextField-root": {
+      margin: theme.spacing(1),
+      width: 300,
+    },
+  },
+}));
+
+function VideoUpdateForm(match) {
   const [videos, setVideos] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -54,4 +67,4 @@ function VideoCreateForm(match) {
   );
 }
 
-export default VideoCreateForm;
+export default VideoUpdateForm;

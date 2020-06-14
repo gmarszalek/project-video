@@ -2,20 +2,20 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import "./Nav.css";
+import "./Nav.scss";
 
 function Nav() {
   return (
     <nav>
       <h3>Logo</h3>
-      <ul className="nav-links">
-        <Link className="link-style" to="/">
+      <ul>
+        <Link to="/">
           <li>Home Page</li>
         </Link>
-        <Link className="link-style" to="/about">
+        <Link to="/about">
           <li>About</li>
         </Link>
-        <Link className="link-style" to="/video">
+        <Link to="/video">
           <li>Video</li>
         </Link>
       </ul>

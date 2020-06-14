@@ -2,16 +2,16 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import VideoList from "./components/VideoList/VideoList";
-import Video from "./components/Video/Video";
-import DisplayVideoList from "./components/DisplayVideoList/DisplayVideoList";
-import DisplaySingleVideo from "./components/DisplaySingleVideo/DisplaySingleVideo";
-import VideoCreateForm from "./components/VideoCreateForm/VideoCreateForm";
-import VideoUpdateForm from "./components/VideoUpdateForm/VideoUpdateForm";
-import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
-import Nav from "./components/Nav/Nav";
-import Page404 from "./components/Page404/Page404";
+import VideoList from "./components/VideoList";
+import Video from "./components/Video";
+import DisplayVideoList from "./components/DisplayVideoList";
+import DisplaySingleVideo from "./components/DisplaySingleVideo";
+import VideoCreateForm from "./components/VideoCreateForm";
+import VideoUpdateForm from "./components/VideoUpdateForm";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import Page404 from "./components/Page404";
 import "./App.css";
 
 class App extends React.Component {
